@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外幣換匯編輯頁</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./js/popup.js"></script>
+</head>
+<body>
+    <div class="wrapper pd-16">
+        <!-- navbar -->
+        <section class="header pd-16 d-flex">
+            <nav class="d-flex">
+                <div class="logo">
+                    <a href="FEdemopage.html">IBM BANK</a>
+                </div>
+                <div class="menu_btn">
+                    <span class="menu_btn_bar" onclick="showMenu()"></span>
+                </div>
+            </nav>
+        </section>
+        <!-- Toggle Menu -->
+        <script>
+            var navLinks = document.getElementById("navLinks") 
+            function showMenu(){
+            navLinks.style.right ="0";
+            }
+            function hideMenu(){
+            navLinks.style.right ="-769px";
+            }
+        </script>
+        <div class="function-title mb-16">
+            <h3>外幣換匯</h3>
+        </div>
+        <!-- exchange info -->
+        <div class="exchange info-card pd-16 mb-16">
+            <div class="info-box d-flex">
+                <div class="currency-title d-flex">
+                    <span>幣別</span>
+                </div>    
+                <div class="usd d-flex">
+                    <div class="flag"></div>
+                    <span>美元</span>
+                </div>
+            </div>
+            <div class="info-box d-flex ">
+                <div class="exrate-title ">
+                    <span>匯率</span>
+                </div>
+                <div class="exrate">30.123</div>
+            </div>
+            <div class="quatation d-flex">
+                <span>報價時間：</span>
+                <div class="time-box" id="quatationTime">
+                    <span>2021/12/01 15:33</span>
+                </div>
+            </div>
+        </div>
+        <!-- buy-info -->
+        <div class="buy-info d-flex mb-8">
+            <div class="title-second ">
+                <h4>我要買入</h4>
+            </div>
+            <div class="icon-frame ">
+                <img class="incon-info" id="linkbt" src="./images/3669161_info_outline_ic_icon.png" width="16px" height="16px" alt="">
+            </div>
+        </div>
+        <div class="buy mb-8">
+            <label for="USDadd"></label>
+            <input class="border  d-flex pd-16" type="number" name="USDadd" id="USDadd" placeholder="美元">
+            <label for="TWDadd"></label>
+            <input class="border  d-flex pd-16 disabled" type="number" name="TWDadd" id="TWDadd" placeholder="台幣" disabled="disabled" >
+        </div>
+        <!-- popup彈窗提示 -->
+        <div class="popup " id="light">
+            <div class="pop-title mb-16">
+                <h4>提示訊息</h4>
+            </div>
+            <div class="pop-txt mb-16">
+                <p>內容說明內容說明內容說明內容說明內容說明內容說明內容說明內容說明內容說明</p>
+            </div>
+            <button class="btn-primary" id="closebt">確認</button>
+        </div>
+        <div id="fade"></div>
+        <!-- account-slection 選擇帳戶 -->
+        <div class="account-selection mb-16">
+            <div class="title-second mb-8">
+                <h4>選擇帳戶</h4>
+            </div>
+            <select class="border pd-16" name="account" id="account-select">
+                <option value="account1">帳戶1234567890</option>
+                <option value="account2">帳戶1234567890</option>
+                <option value="account3">帳戶1234567890</option>
+            </select>
+        </div>
+        <!-- 常用帳號 -->
+        <div class="savedacc mb-16">
+            <div class="title-second mb-8">
+                <h4>是否存入常用？</h4>
+            </div>
+            <div class="btn-box d-flex" >
+                <button class="btn-secondary" style="margin-right: 8px;">是</button>
+                <button class="btn-light">否</button>
+            </div>
+        </div>
+        <!-- terms 條款-->
+        <div class="trems-info mb-8">
+            <div class="title-second mb-8">
+                <h4>條款</h4>
+            </div>
+            <div class="trems border pd-16">
+                <div class="trems-title mb-8">
+                    <span class=" ">條款標題</span>
+                </div>
+                <div class="terms-txt">
+                    <p>
+                        內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        <!-- term-check 同意條款-->
+        <div class="term-check border  d-flex pd-16">
+            <input type="checkbox" name="" id="acceptTerms">
+            <label for="acceptTerms"style="margin-left: 14px;" >我同意以上條款</label>
+        </div>
+        <!-- submit 送出 -->
+        <div class="submit">
+            <div class="btn-box">
+                <button class="btn-primary">送出</button>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner">
+        <div class="slide d-flex">
+            <div class="banner-pic" >
+                <img src="https://picsum.photos/375/119" alt="">
+            </div>
+            <div class="banner-pic" >
+                <img src="https://picsum.photos/375/119" alt="">
+            </div>
+            <div class="banner-pic" >
+                <img src="https://picsum.photos/375/119" alt="">
+            </div>
+        </div>   
+    </div>
+     <!-- footer -->
+    <section class="footer">
+      <footer class="d-flex">
+          <div class="icon-home d-flex">
+            <a href="#">
+                <img src="./images/icon-home.jpg" alt="">
+                <p>home</p>
+            </a>
+           </div>
+        </footer>
+    </section>
+</body>
+</html>

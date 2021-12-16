@@ -1,0 +1,432 @@
+/* ---Base網頁基本樣式--- */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* 網頁預設字型 */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3B3F4C;
+  }
+  /* 全部元素的 box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*  連結樣式 */
+a {
+  text-decoration: none;
+  }
+.wrapper{
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 120%;
+    text-decoration: none;
+}
+
+
+/* ---Layout 共用外觀設定--- */
+/* 字級 */
+h3{
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;    ;
+    margin: 0;
+}
+
+/* 內外距 */
+.pd-16{
+    padding: 0 16px;
+}
+.mb-8{
+    margin-bottom: 8px;
+}
+.mb-16{
+    margin-bottom: 16px;
+}
+/* flex垂直置中 */
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+
+/* border 框線*/
+.border{
+    border: 1px solid #C5C5C5;
+    border-radius: 8px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+    }
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    width: 10px;
+    margin-right: 5px;
+    background-color: #fff;
+    /* margin:80px 0 5px 0; */
+    }
+::-webkit-scrollbar-thumb {
+    width: 4px;
+    height: 26px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #3B3F4C;
+    }
+
+/* input樣式 */
+.buy input{
+    width: 100%;
+    height: 44px;
+    border: 1px solid #C5C5C5;
+    border-radius: 8px;
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+/* input disabled */
+.disabled{
+    background: #ECECEC;
+}
+/* ---Module共用組件---- */
+/* btn按鈕 */
+.btn-box{
+    width: 100%;
+    justify-content: space-between;
+}
+.btn-primary{
+    width: 100%;
+    height: 44px;
+    background: #0062FF;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btn-secondary{
+    width: 163px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #C5C5C5;
+    border-radius: 8px;
+    text-align: center;
+    color: #3B3F4C;
+
+}
+.btn-light{
+    width: 163px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #0062FF;
+    border-radius: 8px;
+    text-align: center;
+    color: #0062FF;
+}
+
+/* navbar */
+.header{
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 5px rgba(99, 99, 99, 0.25);   
+    z-index: 10;
+}
+nav{
+    position: relative;
+    width: 100%;
+}
+.logo{
+    position: absolute;
+    width: 85px;
+    height: 22px;
+}
+.logo a{
+    font-size: 18px;
+    font-weight: 700;
+    color: #0062FF;
+}
+/* 漢堡選單 */
+.header .menu_btn{
+    position: absolute;
+    width: 20px;
+    height: 19px;
+    right: 0;
+}
+.header .menu_btn >.menu_btn_bar,.menu_btn_bar:before,.menu_btn_bar:after 
+{
+    position: absolute;
+    content: ''; 
+    top: 9px;
+    cursor: pointer;
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+}
+
+.header .menu_btn > span:before{
+    top: -9px;
+  }
+.header .menu_btn > span:after{
+    top: 9px;
+  }
+/* menu toggle */
+
+/* ---外幣換匯標題 */
+.function-title{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    top: 78px;
+}
+.function-title > h3{
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* info-card */
+.info-card{
+    position: relative;
+    width: 100%;
+    height: 143px;
+    padding-top: 16px;
+    box-shadow: 0px 1px 5px rgba(99, 99, 99, 0.25);
+    border-radius: 16px;
+}
+
+/* 外幣換匯 exchange info*/
+.exchange .info-box{
+    width: 100%;
+    height: 43px;
+    justify-content: space-between;
+    border-bottom: 1px solid #DADADA;
+}
+
+.exchange .flag{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-image: url(../images/flag-USA.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: circle(50% at 50% 50%);
+}
+.quatation{
+    padding-top: 10px;
+    width: 100%;
+    justify-content: flex-end;
+}
+.quatation span{
+    font-size: 14px;
+    color: #797D8A;
+}
+
+
+/* buy-info */
+.buy-info{
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+.buy-info .icon-frame{
+    width: 16px;
+    height: 16px;
+}
+.buy{
+    width: 100%;
+}
+.buy input{
+    width: 100%;
+    height: 44px;
+    border: 1px solid #C5C5C5;
+    border-radius: 8px;
+    text-align: right;
+}
+
+/* account-selection */
+.account-selection{
+    width: 100%;
+}
+.account-selection select{
+    width: 100%;
+    height: 44px;
+}
+/* savedacc 常用帳號*/
+.savedacc{
+    width: 100%;
+}
+.savedacc .btn-box{
+    width: 100%;
+}
+.savedacc .btn-box button{
+    width: 50%;
+}
+.savedacc .btn-box .btn-light:active{
+    background: #0062FF;
+    color: #FFFFFF;
+}
+
+/* trems-info */
+.trems-info .trems{
+    width: 100%;
+    height: 93px;
+    padding-top: 16px;
+    overflow:scroll;
+}
+.trems .trems-title{
+    font-size: 14px;
+}
+/* term-check 同意條款 */
+.term-check {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 4px;
+}
+
+ /* submit 送出 */
+.submit{
+    width: 100%;
+
+}
+.submit .btn-box{
+    margin: 20px 0 20px  0;
+
+}
+
+/* banner */
+.banner{
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0 105px 0;
+}
+
+.banner .slide {
+    width: 100%;
+    height: 119px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    justify-content: center;
+}
+    
+.slide > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: slide 25s infinite;
+    opacity: 0;
+}
+.slide > img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+.slide > div:nth-child(2) {
+    animation-delay: 3s;
+    }
+    .slide > div:nth-child(3) {
+        animation-delay: 7s;
+    }
+    .slide > div:nth-child(4) {
+        animation-delay: 10s;
+    }
+@keyframes slide {
+        10% {
+          opacity: 1;
+        }
+        20% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+}
+
+/* footer */
+    footer{
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    left: 0px;
+    bottom: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px -1px 5px rgba(99, 99, 99, 0.25);
+    justify-content: center;
+}
+footer .icon-home{
+          width: 36px;
+          height: 53px;
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+      }
+      footer .icon-home img{
+          width: 32px;
+          height: 32px;
+      }
+      footer .icon-home p{
+          color: #3B3F4C;
+      }
+     /* 彈窗 */
+    
+      #light{
+        display:none;
+        position:absolute;
+        top: 305px;
+        left: 0;
+        width: 298px;
+        height: 202px;
+        padding:16px;
+        background: #FFFFFF;
+        border-radius: 16px;
+        z-index:1002;
+        overflow:auto;
+        transform: translateX(10%);
+      }
+      #light .pop-title{
+          margin-top: 8px;
+      }
+      #light .pop-title, .pop-txt{
+        width: 100%;
+        text-align: center;
+      }
+   
+
+      /* 畫面寬度 */
+      @media screen and (min-width: 320px) and (max-width: 768px) { 
+        .wrapper{
+            width: 100%;
+            background: #FFFFFF;
+            display: flex;
+            flex-wrap: wrap;
+            line-height: 120%;
+            text-decoration: none;
+            margin: 0 auto;
+        }
+        #fade {
+            display:none;
+            position:absolute;
+            top:0%;
+            left:0%;
+            width:100%;
+            height:100%;
+            background-color:black;
+            z-index:1001;
+            -moz-opacity:0.4;
+            opacity: 0.4;
+            filter:alpha(opacity=40);
+          }      
+    }
+
+    
